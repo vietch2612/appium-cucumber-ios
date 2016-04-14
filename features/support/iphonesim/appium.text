@@ -1,0 +1,9 @@
+[caps]
+platformName = "ios"
+deviceName = "iPhone 6s"
+platformVersion = "9.3"
+app = "/Users/hoaiviet/Library/Developer/Xcode/DerivedData/goru-ewipagilppyatofoenpcxsmqpqfo/Build/Products/PreRelease-iphonesimulator/goru.app"
+
+[appium_lib]
+sauce_username = false
+sauce_access_key = false
