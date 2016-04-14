@@ -7,3 +7,7 @@ And(/^I press a button labelled "([^"]*)"/) do |button_text|
   # Find a button by text
   button(button_text).click
 end
+
+And(/^I accept Location Service permission$/) do
+  alert_accept
+end

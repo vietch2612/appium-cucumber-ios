@@ -2,7 +2,9 @@
 platformName = "ios"
 deviceName = "iPhone 6s"
 platformVersion = "9.3"
-app = "/Users/Shared/Jenkins/Home/workspace/Goru_iOS_Staging_Simulator/build/Build/Products/Debug-iphonesimulator/goru.app"
+app = "/Users/hoaiviet/Library/Developer/Xcode/DerivedData/goru-ewipagilppyatofoenpcxsmqpqfo/Build/Products/PreRelease-iphonesimulator/goru.app"
+locationServicesAuthorized = true
+bundleId = "vn.siliconstraits.goru"
 
 [appium_lib]
 sauce_username = false
