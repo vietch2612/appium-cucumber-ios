@@ -18,8 +18,13 @@ And(/^I should see the alert$/) do
 end
 
 # Wait to see the alert
-And(/^I should see the alert$/) do
+And(/^I wait to see the alert$/) do
   wait { find_element :class_name, 'UIAAlert' }
+end
+
+# Should see alert with text
+And(/^I wait to see the alert with text "([^\"]*)"$/) do |message|
+  text '#{message}'
 end
 
 # Wait to see alert with text
