@@ -1,6 +1,14 @@
 Feature: Sign up
 
-  Scenario: Sign up with invalid email format
+  Scenario: Sign up
+    When I accept Location Service permission
+    And I wait
+    And I wait
+    And I wait
+    And I wait
+    And I wait
+
+  Scenario: Sign in
     When I accept Location Service permission
     And I wait
     And I wait for 2 seconds
