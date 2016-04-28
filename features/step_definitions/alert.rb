@@ -23,7 +23,7 @@ And(/^I wait to see the alert$/) do
 end
 
 # Should see alert with text
-And(/^I wait to see the alert with text "([^\"]*)"$/) do |message|
+And(/^I should see the alert with text "([^\"]*)"$/) do |message|
   text '#{message}'
 end
 
