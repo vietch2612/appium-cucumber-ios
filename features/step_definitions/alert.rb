@@ -23,8 +23,9 @@ And(/^I wait to see the alert$/) do
 end
 
 # Should see alert with text
-And(/^I should see the alert with text "([^\"]*)"$/) do |message|
-  text '#{message}'
+And(/^I should see the alert "([^\"]*)"$/) do |message|
+    alert         = driver.switch_to.alert # Get the text of the current alert, using
+    message == alert.text
 end
 
 # Wait to see alert with text

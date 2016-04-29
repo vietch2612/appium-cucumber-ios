@@ -15,3 +15,7 @@ end
 And(/^I press the "([^"]*)" button$/) do |button_text|
   button(button_text).click
 end
+
+And(/^I press the Sign up button$/) do
+  button(5).click
+end
