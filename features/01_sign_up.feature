@@ -16,6 +16,7 @@ Scenario: Empty email
 
 @reset_device_settings @2
 Scenario: Invalid email format
+  Given I accept the alert
   Given I am on the Welcome Screen
   When I press the "Sign up now" button
   Then I should see "Connect by e-mail"
@@ -26,6 +27,8 @@ Scenario: Invalid email format
 
 @reset_device_settings @3
 Scenario: Empty password
+  Given I accept the alert
+  Given I am on the Welcome Screen
   When I press the "Sign up now" button
   Then I should see "Connect by e-mail"
   Given I input "emailfortestesting@gmail.com" into input field number 1
@@ -35,29 +38,34 @@ Scenario: Empty password
 
 @reset_device_settings @4
 Scenario: Short password
+  Given I accept the alert
+  Given I am on the Welcome Screen
   When I press the "Sign up now" button
   Then I should see "Connect by e-mail"
   Given I input "emailfortestesting@gmail.com" into input field number 1
-  Given I enter "12345" into input field number 2
+  Given I input "12345" into input field number 2
   When I press the Sign up button
   And I should see the alert "Password must have at least 6 characters"
   And I accept the alert
 
 @reset_device_settings @5
 Scenario: Existed email
+  Given I accept the alert
+  Given I am on the Welcome Screen
   When I press the "Sign up now" button
   Then I should see "Connect by e-mail"
-  Given I input "existed email" into input field number 1
-  Given I enter "12345678" into input field number 2
-  When I press the "Sign up" button
+  Given I input random email to email text field
+  Given I input "12345678" into input field number 2
+  When I press the Sign up button
   Given I toogle to accept agreement T&C
   When I press the "Let’s Go" button
-  Then the title of the alert is "Error!"
-  Then the message of the alert is "Username or Email existed"
-  Then I can dismiss the alert with the OK button
+  Then I should see the alert "Username or Email existed"
+  And I accept the alert
 
 @reset_device_settings @6
 Scenario: Sign up successful with random email
+  Given I accept the alert
+  Given I am on the Welcome Screen
   When I press the "Sign up now" button
   Then I should see "Connect by e-mail"
   Given I input "random email" into input field number 1
@@ -69,6 +77,8 @@ Scenario: Sign up successful with random email
 
 @reset_device_settings @7
 Scenario: Space on password
+  Given I accept the alert
+  Given I am on the Welcome Screen
   When I press the "Sign up now" button
   Then I should see "Connect by e-mail"
   Given I input "random email" into input field number 1
@@ -80,6 +90,8 @@ Scenario: Space on password
 
 @reset_device_settings @8
 Scenario: Special characters on password
+  Given I accept the alert
+  Given I am on the Welcome Screen
   When I press the "Sign up now" button
   Then I should see "Connect by e-mail"
   Given I input "random email" into input field number 1

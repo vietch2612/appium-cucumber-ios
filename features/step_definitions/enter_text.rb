@@ -5,3 +5,10 @@
 Given(/^I input "([^"]*)" into input field number (\d+)$/) do |text,index|
   textfield(index.to_i).type text
 end
+
+Given(/^I input random email to email text field$/) do
+  o = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
+  email = (0...12).map { o[rand(o.length)] }.join
+  email = email + "@gmail.com"
+  textfield(1).type email
+end
